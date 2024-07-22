@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Controller CV</title>
+    <style>
+        body {
+            font-family: system-ui;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 23cm;
+            font-size: medium;
+            color: #212121;
+            margin: 0 auto;
+            padding: 1em;
+            box-sizing: border-box;
+        }
+        h2, h3, h4 {
+            margin: 0.5em 0;
+        }
+        p, ul {
+            margin: 0.5em 0;
+            padding: 0;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 30px;
+        }
+        .section {
+            margin-bottom: 1em;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        .header p {
+            margin: 0.2em 0;
+        }
+        .content {
+            max-width: 100%;
+        }
+        .section-title {
+            border-bottom: 1px solid #212121;
+            padding-bottom: 0.1em;
+            margin-bottom: 0.5em;
+        }
+        [contenteditable] {
+            outline: 0px solid transparent;
+        }
+        .print-button-container {
+            display: flex;
+            justify-content: center;
+            margin: 2em 0;
+        }
+        .print-button {
+    color: #212121;
+    font-family: Impact;
+    font-size: medium;
+    background-color: #fff;
+    border: none;
+    box-shadow: -10px -5px 20px #eee, 10px 10px 20px #efefef;
+    width: 100px;
+    height: 38px;
+    padding: 0;
+    border-radius: 30px;
+    transition: all ease 0.3s;
+    transform: rotate(-360deg);
+}
+
+.print-button:hover {
+    color: #fff; /* Change text color on hover */
+    background-color: #212121; /* Change background color on hover */
+    box-shadow: -10px -5px 20px #eee, 10px 10px 20px #efefef; /* Adjust box-shadow for a more pronounced effect */
+    transform: rotate(0deg); /* Rotate back to original position on hover */
+}
+
+        @media print {
+            .print-button {
+                display: none;
+            }
+            body * {
+                visibility: hidden;
+            }
+            .container, .container * {
+                visibility: visible;
+            }
+            .container {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-button-container">
+        <button class="print-button" onclick="printCV()">Print CV</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h2 contenteditable="true">John Doe</h2>
+            <p contenteditable="true">1234 Elm Street, City, State, 12345</p>
+            <p contenteditable="true">johndoe@example.com | (123) 456-7890</p>
+            <p contenteditable="true"><a href="#">LinkedIn Profile</a></p>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title" contenteditable="true">Professional Summary</h3>
+            <p contenteditable="true">Experienced Document Controller with 15 years of expertise in managing, organizing, and maintaining document control systems in various industries. Adept at ensuring compliance with regulatory requirements and facilitating efficient document retrieval and storage.</p>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title" contenteditable="true">Work Experience</h3>
+            <div class="content">
+                <h4 contenteditable="true">Senior Document Controller</h4>
+                <p contenteditable="true">ABC Corporation, City, State | Jan 2015 – Present</p>
+                <ul contenteditable="true">
+                    <li>Managed document control processes for major projects, ensuring compliance with company and industry standards.</li>
+                    <li>Implemented document management software, improving efficiency and accessibility of records.</li>
+                    <li>Trained and supervised a team of junior document controllers.</li>
+                    <li>Developed and maintained document control procedures and guidelines.</li>
+                    <li>Coordinated with project managers to ensure timely submission of documentation.</li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h4 contenteditable="true">Document Controller</h4>
+                <p contenteditable="true">XYZ Ltd., City, State | Jun 2009 – Dec 2014</p>
+                <ul contenteditable="true">
+                    <li>Maintained and updated project documentation, ensuring accuracy and completeness.</li>
+                    <li>Coordinated with various departments to facilitate document approval and distribution.</li>
+                    <li>Conducted regular audits to ensure compliance with document control procedures.</li>
+                    <li>Developed and implemented filing systems for efficient document retrieval.</li>
+                    <li>Prepared detailed reports on document status and compliance for management.</li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h4 contenteditable="true">Assistant Document Controller</h4>
+                <p contenteditable="true">LMN Corp., City, State | May 2008 – May 2009</p>
+                <ul contenteditable="true">
+                    <li>Assisted in maintaining document control procedures and policies.</li>
+                    <li>Supported document retrieval and distribution for project teams.</li>
+                    <li>Prepared document status reports and handled document filing systems.</li>
+                    <li>Reviewed and verified documents for accuracy and completeness.</li>
+                    <li>Facilitated communication between document control and project teams.</li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h4 contenteditable="true">Junior Document Controller</h4>
+                <p contenteditable="true">DEF Inc., City, State | May 2005 – Apr 2008</p>
+                <ul contenteditable="true">
+                    <li>Assisted in the development and implementation of document control procedures.</li>
+                    <li>Organized and maintained physical and electronic document archives.</li>
+                    <li>Provided support in document retrieval and distribution as needed.</li>
+                    <li>Tracked and recorded incoming and outgoing documents.</li>
+                    <li>Assisted in training new staff on document control processes and systems.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title" contenteditable="true">Education</h3>
+            <div class="content">
+                <h4 contenteditable="true">Bachelor of Science in Business Administration</h4>
+                <p contenteditable="true">University of Example, City, State | Graduated: May 2005</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title" contenteditable="true">Skills</h3>
+            <ul contenteditable="true">
+                <li>Document Management Systems (DMS)</li>
+                <li>Regulatory Compliance</li>
+                <li>Data Entry and Management</li>
+                <li>Quality Assurance</li>
+                <li>Team Leadership</li>
+            </ul>
+        </div>
+    </div>
+    <div class="print-button-container">
+        <button class="print-button" onclick="printCV()">Print CV</button>
+    </div>
+    <script>
+        function printCV() {
+            window.print();
+        }
+    </script>
+</body>
+</html>

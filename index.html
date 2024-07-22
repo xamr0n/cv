@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DC Basic Course - Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="styles/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<style>
+body {
+  background-color: #fff;
+  font-family: "Candara";
+  color: #BD1143;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 1000;
+  background: #fff;
+  text-align: center; /* Center align the content inside nav */
+  padding: 10px 0; /* Adjust padding as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+  inline-size: 100%; /* Ensure nav spans the full width of its container */
+}
+
+label {
+  display: block;
+  margin-block-end: 10px;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+.socialbtns, .socialbtns ul, .socialbtns li {
+  margin: 0;
+  padding: 0;
+  block-size: auto;
+}
+
+.socialbtns li {
+  list-style: none outside none;
+  display: inline-block;
+  padding: 5px;
+}
+
+.socialbtns .fa {
+  color: #212121;
+  background-color: #fff;
+  box-shadow:  -10px 5px 25px #ccc, -10px 5px 25px #fff;
+  width: 40px;
+  height: 28px;
+  padding-top: 12px;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -o-border-radius: 30px;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transform: rotate(-360deg);
+  -moz-transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg);
+  -o-transform: rotate(-360deg);
+}
+
+.socialbtns .fa:hover {
+  text-shadow: inset 10px 10px 10px #000;
+  box-shadow: -10px -5px 25px #ccc, -10px 10px 25px #fff;
+  background-color: #212121;
+  color: #fff;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+
+
+.container {
+  background-color: #fff;
+  border-radius: 60px;
+  text-shadow: 5px 5px 5px #aaa;
+  box-shadow: -10px -5px 50px #eee, 10px 10px 50px #ddd;
+  margin: 60px auto;
+  max-inline-size: 450px;
+  padding: 50px;
+  align-items: center;
+}
+
+h1 {
+  margin: 10px;
+  font-family: Impact;
+  text-align: center;
+  color: #212121;
+  margin-block-end: 30px;
+  font-weight: 550;
+  text-shadow: 1px 1px 5px rgb(180, 170, 185);
+}
+
+#myUL, .agendaUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+  font-family: "Candara";
+}
+
+.active {
+  display: block;
+  text-decoration: none;
+}
+
+/* Additional CSS for link styling */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  text-shadow: 5px 5px 5px rgb(180, 170, 185);
+}
+
+.iframe-container {
+  width: 100%;
+  height: calc(100vh - 70px); /* Adjust this value based on your header height */
+  display: fixed;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+<body>
+    <nav align="center" class="socialbtns">
+     <ul>
+       <li><a href="index.html" class="fa fa-lg fa-home" title="Home"></a></li>
+       <li><a href="#" class="fa fa-lg fa-user" title="About Me"></a></li>
+       <li><a href="#" class="fa fa-lg fa-briefcase" title="Projects"></a></li>
+       <li><a href="#" class="fa fa-lg fa-envelope" title="Email Me"></a></li>
+       <li><a href="vayyip.html" class="fa fa-lg fa-smoking" title="Vayyip Store"></a></li>
+       <li><a href="#" class="fa fa-lg fa-qrcode" title="QR Code"></a></li>
+       <li><a href="/rpi-nav/index.html" class="fa fa-lg fa-code" title="Raspberry Pi"></a></li>
+     </ul>
+   </nav>
+  <h1>EDITABLE CURRICULUM VITAE</h1>
+  <div class="iframe-container">
+    <iframe src="cv-dc.html"></iframe>
+  </div>
+</body>
+</html>
