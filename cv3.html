@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Controller CV</title>
+    <style>
+        body {
+            font-family: system-ui;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 21cm; /* 21cm is the width of A4 paper */
+            font-size: small;
+            color: #121212;
+            margin: 0 auto;
+            padding: 1em;
+            box-sizing: border-box;
+        }
+        h1 {
+            margin-top: 2rem;
+            margin-bottom: 0.1em;
+            font-size: 2rem;
+            text-shadow: 1px 2px 3px #bbb;
+        }
+        h2 {
+            margin-top: 0;
+            margin-bottom: 0.1em;
+            font-size: 1.25rem;
+            color: #313131;
+        }
+        h3 {
+            margin: 0.5em 0;
+            color: #000;
+            text-shadow: 1px 2px 3px #999;
+        }
+        h4 {
+            margin: 0.5em 0;
+        }
+        p, ul {
+            margin: 0.5em 0;
+            padding: 0;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 25px;
+        }
+        .section {
+            margin-bottom: 1em;
+        }
+        .header {
+            text-align: start;
+        }
+        .header p {
+            margin: 0.2em 0;
+        }
+        .content {
+            max-width: 100%;
+        }
+        .section-title {
+            border-bottom: .15em solid #313131;
+            padding-bottom: 0.5em;
+            margin-bottom: 0.5em;
+        }
+        [contenteditable] {
+            outline: 0px solid transparent;
+        }
+        .print-button-container {
+            display: flex;
+            justify-content: center;
+            margin: 2em 0;
+        }
+        .print-button {
+            color: #212121;
+            font-family: Impact;
+            font-size: medium;
+            background-color: #fff;
+            border: none;
+            box-shadow: -10px -5px 20px #eee, 10px 10px 20px #efefef;
+            width: 100px;
+            height: 38px;
+            padding: 0;
+            border-radius: 30px;
+            transition: all ease 0.3s;
+            transform: rotate(-360deg);
+        }
+        .print-button:hover {
+            color: #fff;
+            background-color: #212121;
+            box-shadow: -10px -5px 20px #eee, 10px 10px 20px #efefef;
+            transform: rotate(0deg);
+        }
+        .columns {
+            display: flex;
+            gap: 1.5em;
+        }
+        .column-30 {
+            flex: 30%;
+        }
+        .column-70 {
+            flex: 70%;
+        }
+        @media print {
+            @page {
+                size: A4;
+                margin: 0.25in 0.6in 0.25in 0.6in;
+            }
+            .print-button {
+                display: none;
+            }
+            body * {
+                visibility: hidden;
+            }
+            .container, .container * {
+                visibility: visible;
+            }
+            .container {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: auto;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 1em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            h4 {
+                font-size: 1em;
+            }
+            p, ul {
+                font-size: 0.9em;
+            }
+            .print-button {
+                width: 80px;
+                height: 30px;
+                font-size: small;
+            }
+            .columns {
+                flex-direction: column;
+            }
+            .column-30, .column-70 {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-button-container">
+        <button class="print-button" onclick="printCV()">Print CV</button>
+    </div>
+    <div class="container">
+        <div class="header">            
+            <h1 contenteditable="true">John Doe</h1>
+            <h2 class="section-title" contenteditable="true">Document Controller with 15 Years Experience</h2>
+        </div>
+        <div class="columns">
+            <div class="column-30">
+                <div class="section">
+                    <h3 contenteditable="true">Contact</h3>
+                    <p contenteditable="true">(123) 456-7890</p>
+                    <p contenteditable="true">johndoe@example.com</p>
+                    <p contenteditable="true">1234 Elm Street, City, State, 12345</p>
+                    <p contenteditable="true" style="color: #313131;">www.linkedin.com/in/myprofile</p>
+                </div>
+
+                <div class="section">
+                    <h3 contenteditable="true">Education</h3>
+                    <div class="content">
+                        <h4 contenteditable="true">B.S. Business Administration</h4>
+                        <p contenteditable="true">University of Example, City, State</p>
+                        <p contenteditable="true">Graduated: May 2005</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3 contenteditable="true">Skills</h3>
+                    <ul contenteditable="true">
+                        <li>Document Management Systems (DMS)</li>
+                        <li>Regulatory Compliance</li>
+                        <li>Data Entry and Management</li>
+                        <li>Quality Assurance</li>
+                        <li>Team Leadership</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-70">
+                <div class="section">
+                    <h3 contenteditable="true">Professional Summary</h3>
+                    <p contenteditable="true">Experienced Document Controller with 15 years of expertise in managing, organizing, and maintaining document control systems in various industries. Adept at ensuring compliance with regulatory requirements and facilitating efficient document retrieval and storage.</p>
+                
+                    <h3 contenteditable="true">Work Experience</h3>
+                    <div class="content">
+                        <h4 contenteditable="true">Senior Document Controller</h4>
+                        <p contenteditable="true">ABC Corporation, City, State | Jan 2015 – Present</p>
+                        <ul contenteditable="true">
+                            <li>Managed document control processes for major projects, ensuring compliance with company and industry standards.</li>
+                            <li>Implemented document management software, improving efficiency and accessibility of records.</li>
+                            <li>Trained and supervised a team of junior document controllers.</li>
+                            <li>Developed and maintained document control procedures and guidelines.</li>
+                            <li>Coordinated with project managers to ensure timely submission of documentation.</li>
+                        </ul>
+                    </div>
+
+                    <div class="content">
+                        <h4 contenteditable="true">Document Controller</h4>
+                        <p contenteditable="true">XYZ Ltd., City, State | Jun 2009 – Dec 2014</p>
+                        <ul contenteditable="true">
+                            <li>Maintained and updated project documentation, ensuring accuracy and completeness.</li>
+                            <li>Coordinated with various departments to facilitate document approval and distribution.</li>
+                            <li>Conducted regular audits to ensure compliance with document control procedures.</li>
+                            <li>Developed and implemented filing systems for efficient document retrieval.</li>
+                            <li>Prepared detailed reports on document status and compliance for management.</li>
+                        </ul>
+                    </div>
+
+                    <div class="content">
+                        <h4 contenteditable="true">Assistant Document Controller</h4>
+                        <p contenteditable="true">LMN Corp., City, State | May 2008 – May 2009</p>
+                        <ul contenteditable="true">
+                            <li>Assisted in maintaining document control procedures and policies.</li>
+                            <li>Supported document retrieval and distribution for project teams.</li>
+                            <li>Prepared document status reports and handled document filing systems.</li>
+                            <li>Reviewed and verified documents for accuracy and completeness.</li>
+                            <li>Facilitated communication between document control and project teams.</li>
+                        </ul>
+                    </div>
+
+                    <div class="content">
+                        <h4 contenteditable="true">Junior Document Controller</h4>
+                        <p contenteditable="true">DEF Inc., City, State | May 2005 – Apr 2008</p>
+                        <ul contenteditable="true">
+                            <li>Assisted in the development and implementation of document control procedures.</li>
+                            <li>Organized and maintained physical and electronic document archives.</li>
+                            <li>Provided support in document retrieval and distribution as needed.</li>
+                            <li>Tracked and recorded incoming and outgoing documents.</li>
+                            <li>Assisted in training new staff on document control processes and systems.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="print-button-container">
+        <button class="print-button" onclick="printCV()">Print CV</button>
+    </div>
+    <script>
+        function printCV() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
