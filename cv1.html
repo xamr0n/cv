@@ -11,33 +11,39 @@
             padding: 0;
         }
         .container {
-            width: 23cm;
-            font-size: medium;
+            width: 100%;
+            max-width: 23cm;
+            font-size: 0.8em;
             color: #212121;
-            margin: 0 auto;
+            margin: 1em auto;
             padding: 1em;
             box-sizing: border-box;
         }
-        h2, h3, h4 {
-            margin: 0.5em 0;
+        h2, h3 {
+            margin-block-start: 1;
         }
-        p, ul {
-            margin: 0.5em 0;
+        h4 {
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        p {
+            margin: 0;
             padding: 0;
         }
         ul {
             list-style-type: disc;
-            padding-left: 30px;
+            padding-inline-start: 30px;
+            margin: 0.5em auto;
         }
         .section {
-            margin-bottom: 1em;
+            margin-bottom: .5em;
         }
         .header {
             text-align: center;
             margin-bottom: 1em;
         }
         .header p {
-            margin: 0.2em 0;
+            margin: 0.1em 0;
         }
         .content {
             max-width: 100%;
@@ -56,28 +62,30 @@
             margin: 2em 0;
         }
         .print-button {
-    color: #212121;
-    font-family: Impact;
-    font-size: medium;
-    background-color: #fff;
-    border: none;
-    box-shadow: -10px -5px 20px #eee, 10px 10px 20px #efefef;
-    width: 100px;
-    height: 38px;
-    padding: 0;
-    border-radius: 30px;
-    transition: all ease 0.3s;
-    transform: rotate(-360deg);
-}
-
-.print-button:hover {
-    color: #fff; /* Change text color on hover */
-    background-color: #212121; /* Change background color on hover */
-    box-shadow: -10px -5px 20px #eee, 10px 10px 20px #efefef; /* Adjust box-shadow for a more pronounced effect */
-    transform: rotate(0deg); /* Rotate back to original position on hover */
-}
-
+            color: #212121;
+            font-family: Impact;
+            font-size: medium;
+            background-color: #fff;
+            border: none;
+            box-shadow: -10px -5px 20px #eee, 10px 10px 20px #efefef;
+            width: 100px;
+            height: 38px;
+            padding: 0;
+            border-radius: 30px;
+            transition: all ease 0.3s;
+            transform: rotate(-360deg);
+        }
+        .print-button:hover {
+            color: #fff; /* Change text color on hover */
+            background-color: #212121; /* Change background color on hover */
+            box-shadow: -10px -5px 20px #eee, 10px 10px 20px #efefef; /* Adjust box-shadow for a more pronounced effect */
+            transform: rotate(0deg); /* Rotate back to original position on hover */
+        }
         @media print {
+            @page {
+                size: A4;
+                margin: 0.25in 0.6in 0.25in 0.6in; /* top right bottom left */
+            }
             .print-button {
                 display: none;
             }
@@ -91,6 +99,31 @@
                 position: absolute;
                 left: 0;
                 top: 0;
+                width: auto;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 1em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            h3 {
+                font-size: 1em;
+            }
+            h4 {
+                font-size: 0.8em;
+            }
+            p, ul {
+                font-size: 0.7em;
+            }
+            .print-button {
+                width: 80px;
+                height: 30px;
+                font-size: small;
             }
         }
     </style>
