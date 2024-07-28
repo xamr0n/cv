@@ -11,14 +11,13 @@
             padding: 0;
             block-size: 100%;
             inline-size: 100%;
-            overflow: hidden; /* Prevents extra content from affecting layout */
         }
         .container {
             position: relative;
             inline-size: 21cm; /* A4 width */
             block-size: 29.7cm; /* A4 height */
             margin: 0 auto;
-            padding: 1.5cm; /* Padding to ensure content isn't too close to the edges */
+            padding: 1.5cm;
             box-sizing: border-box;
             background: url('3.webp') no-repeat center;
             background-size: cover;
@@ -26,7 +25,7 @@
         }
         .content {
             position: relative;
-            z-index: 1; /* Ensure the content is above the background */
+            z-index: 1;
             color: #121212;
             display: flex;
             gap: .7cm;
@@ -78,7 +77,7 @@
             margin: 0.2em 0;
         }
         .section-title {
-            border-block-end: .15em solid #313131;
+            border-block-end: .13em solid #666;
             padding: 0;
             margin-block-end: 0;
         }
@@ -148,7 +147,7 @@
           <button class="print-button" onclick="window.print()">Print CV</button>
       </div>
         <div class="header">
-            <h1>John Ritz</h1>
+            <h1>John Fritz</h1>
             <h2 class="section-title">Senior Document Controller with 15 Years Experience</h2>
         </div>
         <div class="content">
