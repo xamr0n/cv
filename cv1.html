@@ -9,18 +9,26 @@
             font-family: system-ui;
             margin: 0;
             padding: 0;
+            font-size: small;
         }
         .container {
             width: 100%;
             max-width: 23cm;
-            font-size: 0.8em;
             color: #212121;
             margin: 1em auto;
             padding: 1em;
             box-sizing: border-box;
         }
-        h2, h3 {
-            margin-block-start: 1;
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        h3 {
+            margin-top: 0.5em;
+            font-size: 1.2em;
+            line-height: .8em;
         }
         h4 {
             margin-block-start: 0;
@@ -42,7 +50,7 @@
             text-align: center;
             margin-bottom: 1em;
         }
-        .header p {
+        .header p, h1, h3 {
             margin: 0.1em 0;
         }
         .content {
@@ -108,6 +116,9 @@
             .container {
                 padding: 1em;
             }
+            h1 {
+                font-size: 1.5em;
+            }
             h2 {
                 font-size: 1.2em;
             }
@@ -129,28 +140,25 @@
     </style>
 </head>
 <body>
-    <div class="print-button-container">
-        <button class="print-button" onclick="printCV()">Print CV</button>
-    </div>
-    <div class="container">
+    <div class="container" contenteditable="true">
         <div class="header">
-            <h2 contenteditable="true">John Doe</h2>
-            <p contenteditable="true">1234 Elm Street, City, State, 12345</p>
-            <p contenteditable="true">johndoe@example.com | (123) 456-7890</p>
-            <p contenteditable="true"><a href="#">LinkedIn Profile</a></p>
+            <h1>John Doe</h1>
+            <h3><strong>Senior Document Controller</strong></h3>
+            <p>johndoe@example.com | (123) 456-7890</p>
+            <p><a href="#">LinkedIn Profile</a></p>
         </div>
 
         <div class="section">
             <h3 class="section-title" contenteditable="true">Professional Summary</h3>
-            <p contenteditable="true">Experienced Document Controller with 15 years of expertise in managing, organizing, and maintaining document control systems in various industries. Adept at ensuring compliance with regulatory requirements and facilitating efficient document retrieval and storage.</p>
+            <p>Experienced Document Controller with 15 years of expertise in managing, organizing, and maintaining document control systems in various industries. Adept at ensuring compliance with regulatory requirements and facilitating efficient document retrieval and storage.</p>
         </div>
 
         <div class="section">
             <h3 class="section-title" contenteditable="true">Work Experience</h3>
             <div class="content">
-                <h4 contenteditable="true">Senior Document Controller</h4>
-                <p contenteditable="true">ABC Corporation, City, State | Jan 2015 – Present</p>
-                <ul contenteditable="true">
+                <h4>Senior Document Controller</h4>
+                <p>ABC Corporation, City, State | Jan 2015 – Present</p>
+                <ul>
                     <li>Managed document control processes for major projects, ensuring compliance with company and industry standards.</li>
                     <li>Implemented document management software, improving efficiency and accessibility of records.</li>
                     <li>Trained and supervised a team of junior document controllers.</li>
@@ -160,9 +168,9 @@
             </div>
 
             <div class="content">
-                <h4 contenteditable="true">Document Controller</h4>
-                <p contenteditable="true">XYZ Ltd., City, State | Jun 2009 – Dec 2014</p>
-                <ul contenteditable="true">
+                <h4>Document Controller</h4>
+                <p>XYZ Ltd., City, State | Jun 2009 – Dec 2014</p>
+                <ul>
                     <li>Maintained and updated project documentation, ensuring accuracy and completeness.</li>
                     <li>Coordinated with various departments to facilitate document approval and distribution.</li>
                     <li>Conducted regular audits to ensure compliance with document control procedures.</li>
@@ -172,9 +180,9 @@
             </div>
 
             <div class="content">
-                <h4 contenteditable="true">Assistant Document Controller</h4>
-                <p contenteditable="true">LMN Corp., City, State | May 2008 – May 2009</p>
-                <ul contenteditable="true">
+                <h4>Assistant Document Controller</h4>
+                <p>LMN Corp., City, State | May 2008 – May 2009</p>
+                <ul>
                     <li>Assisted in maintaining document control procedures and policies.</li>
                     <li>Supported document retrieval and distribution for project teams.</li>
                     <li>Prepared document status reports and handled document filing systems.</li>
@@ -184,9 +192,9 @@
             </div>
 
             <div class="content">
-                <h4 contenteditable="true">Junior Document Controller</h4>
-                <p contenteditable="true">DEF Inc., City, State | May 2005 – Apr 2008</p>
-                <ul contenteditable="true">
+                <h4>Junior Document Controller</h4>
+                <p>DEF Inc., City, State | May 2005 – Apr 2008</p>
+                <ul>
                     <li>Assisted in the development and implementation of document control procedures.</li>
                     <li>Organized and maintained physical and electronic document archives.</li>
                     <li>Provided support in document retrieval and distribution as needed.</li>
@@ -199,14 +207,14 @@
         <div class="section">
             <h3 class="section-title" contenteditable="true">Education</h3>
             <div class="content">
-                <h4 contenteditable="true">Bachelor of Science in Business Administration</h4>
-                <p contenteditable="true">University of Example, City, State | Graduated: May 2005</p>
+                <h4>Bachelor of Science in Business Administration</h4>
+                <p>University of Example, City, State | Graduated: May 2005</p>
             </div>
         </div>
 
         <div class="section">
             <h3 class="section-title" contenteditable="true">Skills</h3>
-            <ul contenteditable="true">
+            <ul>
                 <li>Document Management Systems (DMS)</li>
                 <li>Regulatory Compliance</li>
                 <li>Data Entry and Management</li>
